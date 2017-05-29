@@ -2,6 +2,13 @@ package com.banking.Simple_Banking;
 
 import java.util.Date;
 
+/**
+ * <h1>Class Name: Account</h1> Account class is the super class of all type of
+ * Accounts. It implements AccountInterface.
+ * <p>
+ * @author MD KALAM-UL-MAZID
+ * @version 1.0
+ */
 public class Account implements AccountInterface {
 
 	private int id;
@@ -9,6 +16,14 @@ public class Account implements AccountInterface {
 	private static double annualInterestRate;
 	private Date dateCreated = new Date();
 
+	/**
+	 * <h1>Constructor of Account Class</h1> Constructor that initialize variables with
+	 * zero values
+	 * <p>
+	 * @param No Parameters
+	 * @author MD KALAM-UL-MAZID
+	 * @version 1.0
+	 */
 	private Account() {
 		id = 0;
 		balance = 0.0;
@@ -59,15 +74,14 @@ public class Account implements AccountInterface {
 		this.dateCreated = dateCreated;
 	}
 
-
 	public void withdraw(double amount) {
 		if (this.getBalance() > amount) {
 			balance -= amount;
 		}
 	}
-	
+
 	public void deposit(double amount) {
-		if (amount>0) {
+		if (amount > 0) {
 			balance += amount;
 		}
 	}
